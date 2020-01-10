@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://172.16.18.18:3307/skysso?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8&useSSL=false
+    username: aoc
+    password: 123456
+    hikari:
+      minimum-idle: 3
+      maximum-pool-size: 10
+      connection-test-query: select 1
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+# Logger Config
+logging:
+  level:
+    com.amu.esstudy.mapper: debug
